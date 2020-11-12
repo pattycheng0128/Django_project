@@ -3,11 +3,18 @@
 {% block title %} Home Page {% endblock title %}
 
 {% block content %}
-    <p> pending - add iframe </p>
-    <div class="tvcode">
-        <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials">
-        </iframe>
+    <div>
+        {% if hour > 18 %}
+            <p>Good night!</p>
+        {% elif hour < 10 %}
+            <p>Good morning</p>
+        {% else %}
+            <p>error</p>
+        {% endif %}
+    </div>
+    <div>
+        {% load static %}
+        <img src="{% static "images/pexels-mateusz-sałaciak-2.jpg" %}" width="300" height="400">
     </div>
 
 {% endblock content %}
-    

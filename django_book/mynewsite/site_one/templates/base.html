@@ -15,16 +15,16 @@
                 <a class="navbar-brand" href="#">WebSiteName</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url "index" %}"> Live TV<span
+                <li><a href="{% url "index" %}">Home</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"> Live TV<span
                             class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">東森</a></li>
-                        <li><a href="#">民視</a></li>
-                        <li><a href="#">台視</a></li>
-                        <li><a href="#">華視</a></li>
+                        <li><a href="{% url 'tv-url' 0 %}">中視</a></li>
+                        <li><a href="{% url 'tv-url' 1 %}">民視</a></li>
+                        <li><a href="{% url 'tv-url' 2 %}">台視</a></li>
+                        <li><a href="{% url 'tv-url' 3 %}">華視</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Page 2</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -36,6 +36,9 @@
     <div id="content" class="mt-2 ml-5" style="margin-left: 30px" ;>
         {% block content %}
         {% endblock %}
+    </div>
+    <div class="panel panel-default" style="margin-top: 10px;">
+        <div class="panel-footer"> <em>{{ now }}</em></div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

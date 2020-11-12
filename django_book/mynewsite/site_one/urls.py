@@ -3,6 +3,6 @@ from site_one import views
 
 urlpatterns = [
     path('',views.index, name='index'),
-    path('<int:tvno>',views.index, name='tv-url'),
+    path('<int:tvno>',views.show_tv, name='tv-url'),
 
 ]
