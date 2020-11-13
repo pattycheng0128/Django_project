@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'weshare',
         'USER':'root',
-        'PASSWORD':'123456',
+        'PASSWORD':'b3onnncx',
         'HOST':'127.0.0.1',
         'POST':'3306',
     }

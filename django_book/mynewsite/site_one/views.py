@@ -19,3 +19,16 @@ def show_tv(request, tvno=0):
     tv = tv_list[tvno]
     hour = now.timetuple().tm_hour
     return render(request, 'show_tv.html', locals())
+
+def carlist(request, maker=0):
+    car_maker = ['SAAB', 'Ford', 'Honda', 'Nissan']
+    car_list = [[],
+        ['A001', 'A002', 'A003', 'A004'],
+        ['A001', 'A002', 'A003', 'A004'],
+        ['A001', 'A002', 'A003', 'A004'],
+
+    ]
+    # maker = maker
+    maker_name = car_maker[maker]
+    cars = car_list[maker]
+    return render(request, 'carlist.html', locals())

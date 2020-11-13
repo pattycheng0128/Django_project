@@ -4,17 +4,9 @@
 
 {% block content %}
     <div>
-        {% if hour > 18 %}
-            <p>Good night!</p>
-        {% elif hour < 10 %}
-            <p>Good morning</p>
-        {% else %}
-            <p>error</p>
-        {% endif %}
-    </div>
-    <div>
         {% load static %}
         <img src="{% static "images/pexels-mateusz-sałaciak-2.jpg" %}" width="300" height="400">
     </div>
 
 {% endblock content %}
+

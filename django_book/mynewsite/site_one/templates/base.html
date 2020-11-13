@@ -25,6 +25,7 @@
                         <li><a href="{% url 'tv-url' 3 %}">華視</a></li>
                     </ul>
                 </li>
+                <li><a href="{% url "carlist-url" %}">Car</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -37,8 +38,8 @@
         {% block content %}
         {% endblock %}
     </div>
-    <div class="panel panel-default" style="margin-top: 10px;">
-        <div class="panel-footer"> <em>{{ now }}</em></div>
+    <div class="footer" style="margin-top:10px ;color:blue;">
+        {% include "footer.html" %}
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

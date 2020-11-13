@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %} Car list {% endblock title %}
+
+{% block content %}
+    <div>
+        <p>歡迎二手車場</p>
+        <table class="table table-striped">
+            <tr>
+            {% for m in car_maker %}
+                <td>
+                    <a href="{% url 'carlist-url' forloop.counter0 %}">{{m}}</a>
+                </td>
+            {% endfor %}
+            </tr>
+        </table>
+        {% if cars %}
+        <table class="table table-bordered">
+            <tr>
+                <td>車廠</td><td>車款</td>
+            </tr>
+        {% endif %}    
+        {% for c  in cars %}
+            <tr>
+                <td>{{ maker_name }}</td>
+                <td>{{ c }}</td>
+            </tr>
+        {% empty %}
+            <h3>車廠<em>{{ maker_name }}</em>目前無庫存</h3>
+        {% endfor %}
+        {% if cars %}
+        </table>
+        {% endif %}
+    </div>
+
+{% endblock content %}
+    
